@@ -1,0 +1,9 @@
+catch.sh中WLAN需替换成服务器网卡，且传一个参数，参数为捕获包后保存名字
+运行命令示范：
+./catch.sh 123.pcap
+(脚本中$1前可加路径)
+cut.sh中需传一个参，即要分解的包名，它会分包，存图。裁剪图片（我设置的是512*512，神经网络训练中需要对应修改输入）
+例如：./cut.sh 123.pcap
+
+剩下三个py文件，ifport录指纹前序列化pcap，up是爬虫（需要配chromedriver环境以及可能需要更改sleep时间）
+image_preprocess和py都会在cut.sh中直接调用
